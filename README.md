@@ -124,3 +124,8 @@ Open `index.html` in any modern browser.
 * Single branch compatible
 * Minimal codebase (well below 1 MB expected)
 * Includes complete code and documentation
+
+---
+<div align="center">
+  <b>Built for the Virtual PromptWars hosted by Hack2Skill</b>
+</div>
