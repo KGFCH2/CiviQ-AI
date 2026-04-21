@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiviQ AI - Election Process Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Source+Serif+4:opsz,wght@8..60,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="hero-tools">
+          <p class="badge" data-en="PromptWars: Virtual - Challenge Build">PromptWars: Virtual - Challenge Build</p>
+          <span id="aiStatus" class="ai-status-off" title="AI mode: OFF"><i class="fas fa-robot"></i> OFF</span>
+          <button id="settingsBtn" type="button" class="icon-btn" title="Settings" data-en="Settings"><i class="fas fa-cog"></i></button>
+          <button id="themeToggle" type="button" class="theme-toggle" data-en="Dark Mode">Dark Mode</button>
+        </div>
+        <h1 data-en="CiviQ AI">CiviQ AI</h1>
+        <p class="subtitle" data-en="A smart and friendly civic education assistant for election literacy.">A smart and friendly civic education assistant for election literacy.</p>
+      </header>
+
+      <!-- Settings Modal -->
+      <div id="settingsModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 data-en="API Settings">API Settings</h2>
+            <button id="closeSettings" type="button" class="close-btn">×</button>
+          </div>
+          <div class="modal-body">
+            <label>
+              <span data-en="AI API Key">AI API Key</span>
+              <input id="geminiKey" type="password" placeholder="Paste your Groq API key (gsk_...) here..." data-en-placeholder="Paste your Groq API key (gsk_...) here..." />
+              <small data-en="Get API key from Groq Cloud Console">Get API key from <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">Groq Cloud Console</a></small>
+            </label>
+            <label>
+              <input id="useGemini" type="checkbox" />
+              <span data-en="Enable AI-powered responses (Groq)">Enable AI-powered responses (Groq)</span>
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button id="saveSetting" type="button" data-en="Save">Save</button>
+            <button id="cancelSetting" type="button" class="ghost" data-en="Cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="card profile-card">
+        <h2 data-en="User Profile">User Profile</h2>
+        <div class="grid">
+          <label>
+            <span data-en="Age">Age</span>
+            <input id="age" type="number" min="10" max="120" placeholder="e.g. 19" data-en-placeholder="e.g. 19" />
+          </label>
+          <label>
+            <span data-en="Country">Country</span>
+            <input id="country" type="text" value="India" placeholder="India" data-en-placeholder="India" />
+          </label>
+          <label>
+            <span data-en="First-time voter">First-time voter</span>
+            <select id="firstTime">
+              <option value="Yes" data-en="Yes">Yes</option>
+              <option value="No" data-en="No">No</option>
+            </select>
+          </label>
+          <label>
+            <span data-en="Portal Language">Portal Language</span>
+            <select id="portalLanguage">
+              <option value="en">English</option>
+              <option value="hi">Hindi (हिन्दी)</option>
+              <option value="bn">Bengali (বাংলা)</option>
+              <option value="ta">Tamil (தமிழ்)</option>
+              <option value="te">Telugu (తెలుగు)</option>
+              <option value="mr">Marathi (मराठी)</option>
+              <option value="gu">Gujarati (ગુજરાતી)</option>
+              <option value="kn">Kannada (ಕನ್ನಡ)</option>
+              <option value="ml">Malayalam (മലയാളം)</option>
+              <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+              <option value="or">Odia (ଓଡ଼ିଆ)</option>
+              <option value="as">Assamese (অসমীয়া)</option>
+              <option value="ur">Urdu (اردو)</option>
+            </select>
+          </label>
+          <label>
+            <span data-en="Answer Language">Answer Language</span>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="hi">Hindi (हिन्दी)</option>
+              <option value="bn">Bengali (বাংলা)</option>
+              <option value="ta">Tamil (தமிழ்)</option>
+              <option value="te">Telugu (తెలుగు)</option>
+              <option value="mr">Marathi (मराठी)</option>
+              <option value="gu">Gujarati (ગુજરાતી)</option>
+              <option value="kn">Kannada (ಕನ್ನಡ)</option>
+              <option value="ml">Malayalam (മലയാളം)</option>
+              <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+              <option value="or">Odia (ଓଡ଼ିଆ)</option>
+              <option value="as">Assamese (অসমীয়া)</option>
+              <option value="ur">Urdu (اردو)</option>
+            </select>
+          </label>
+          <label>
+            <span data-en="Task Mode">Task Mode</span>
+            <select id="mode">
+              <option value="A" data-en="A - General Question">A - General Question</option>
+              <option value="B" data-en="B - Election Process">B - Election Process</option>
+              <option value="C" data-en="C - Register to Vote">C - Register to Vote</option>
+              <option value="D" data-en="D - Election Timeline">D - Election Timeline</option>
+              <option value="E" data-en="E - Myth vs Fact">E - Myth vs Fact</option>
+              <option value="F" data-en="F - Voting Simulation">F - Voting Simulation</option>
+              <option value="G" data-en="G - Explain for Age 15">G - Explain for Age 15</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card chat-card">
+        <h2 data-en="Ask CiviQ AI">Ask CiviQ AI</h2>
+        <label>
+          <span data-en="User Input">User Input</span>
+          <textarea
+            id="userInput"
+            rows="4"
+            placeholder="Type your election-related question, statement, or topic..."
+            data-en-placeholder="Type your election-related question, statement, or topic..."
+          ></textarea>
+        </label>
+
+        <div class="actions">
+          <button id="generateBtn" type="button" data-en="Generate Response">Generate Response</button>
+          <button id="resetBtn" type="button" class="ghost" data-en="Reset">Reset</button>
+        </div>
+
+        <article id="output" class="output" aria-live="polite">
+          <h3 data-en="Response">Response</h3>
+          <p data-en="Your result will appear here.">Your result will appear here.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
