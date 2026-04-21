@@ -842,6 +842,19 @@ generateBtn.addEventListener("click", async () => {
     }
     const translated = await translateHtmlResponse(html, p.lang);
     render(translated);
+
+  }
+});
+
+// Remove loader on page load
+window.addEventListener("load", () => {
+  const loader = document.getElementById("initial-loader");
+  if (loader) {
+    // Keep it visible for at least 1.5s so the user can enjoy the animation
+    setTimeout(() => {
+      loader.classList.add("hidden");
+      setTimeout(() => loader.remove(), 600);
+    }, 1500);
   }
 });
 
