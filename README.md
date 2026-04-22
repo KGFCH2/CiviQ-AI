@@ -148,3 +148,5 @@ Open `index.html` in any modern browser.
 ---
 
 Built for the [Virtual PromptWars](https://promptwars.in/promptwarsVirtual.html) hosted by [Hack2Skill](https://hack2skill.com/?utm_source=hack2skill&utm_medium=homepage)
+
+---
