@@ -1121,8 +1121,57 @@ function updateGoogleMapVisibility() {
 
 modeInput?.addEventListener("change", updateGoogleMapVisibility);
 
-document.getElementById("googleSignInPlaceholder")?.addEventListener("click", () => {
-    window.open("https://accounts.google.com/", "_blank");
+/**
+ * Google Identity: Decodes the JWT payload to get user information
+ */
+function decodeJwt(token) {
+  try {
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    const jsonPayload = decodeURIComponent(
+      window
+        .atob(base64)
+        .split("")
+        .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+        .join("")
+    );
+    return JSON.parse(jsonPayload);
+  } catch {
+    return null;
+  }
+}
+
+function handleCredentialResponse(response) {
+  const payload = decodeJwt(response.credential);
+  if (payload) {
+    // Hide standard button, show profile
+    const btnContainer = document.getElementById("googleBtnContainer");
+    const profileDisplay = document.getElementById("userProfileDisplay");
+    const userName = document.getElementById("userName");
+    const userAvatar = document.getElementById("userAvatar");
+
+    if (btnContainer) btnContainer.style.display = "none";
+    if (profileDisplay) profileDisplay.classList.remove("hidden");
+    if (userName) userName.textContent = payload.name;
+    if (userAvatar) userAvatar.src = payload.picture;
+
+    console.log("Welcome,", payload.name);
+  }
+}
+
+window.addEventListener("load", () => {
+  if (typeof google !== "undefined") {
+    google.accounts.id.initialize({
+      client_id: "1070344786559-nqaorhda08cf8gfmskvdeh09eh5m1pfq.apps.googleusercontent.com",
+      callback: handleCredentialResponse,
+      auto_select: false,
+    });
+    google.accounts.id.renderButton(document.getElementById("googleBtnContainer"), {
+      theme: "outline",
+      size: "large",
+      shape: "pill"
+    });
+  }
 });
 
 /* === Automated Testing (Deep Validation & Failure Paths) === */
