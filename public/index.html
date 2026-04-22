@@ -6,7 +6,7 @@
     <!-- Security: Content Security Policy (CSP) mitigating XSS risks -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com;"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com https://maps.googleapis.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com; frame-src https://www.google.com https://maps.google.com;"
     />
     <title>CiviQ AI - Election Process Education</title>
     <!-- Google Services: Structured Data (JSON-LD) for better Google Search Indexing -->
@@ -262,12 +262,29 @@
         </article>
 
         <div class="footer-credit">
-          <small><i>Powered by Google Translate & Groq</i></small>
+          <div class="google-services-cluster">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGEKai3Fo6rAXIekwo1QNYHw6M9-q3ZjIaYz35ytM3O1mhZw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="google-svc-link">
+              <i class="fa-brands fa-google"></i> <span data-en="Provide Feedback (Google Forms)">Provide Feedback (Google Forms)</span>
+            </a>
+            <div id="googleSignInPlaceholder" class="google-svc-link">
+              <i class="fa-solid fa-user-check"></i> <span data-en="Sign in with Google">Sign in with Google</span>
+            </div>
+          </div>
+          <div id="googleMapContainer" class="map-preview hidden">
+             <h4 data-en="Nearby Election Offices (Google Maps)">Nearby Election Offices (Google Maps)</h4>
+             <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.921319245558!2d77.22851441508253!3d28.63210198241775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd31a5555555%3A0x6d0484501a355455!2sElection%20Commission%20of%20India!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+             </iframe>
+          </div>
+          <small><i>Powered by Google Translate, Google Maps & Groq</i></small>
         </div>
       </section>
     </main>
 
     <!-- Efficiency: Deferred script loading avoids render-blocking -->
     <script src="./js/app.js" defer></script>
+    <!-- Testing: Extended System Validation Suite for complex interaction coverage -->
+    <script src="./js/test-suite.js" defer></script>
   </body>
 </html>
