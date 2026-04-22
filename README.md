@@ -7,6 +7,7 @@ CiviQ AI is a smart, lightweight, and interactive civic education assistant buil
 ## 🔗 Important Links
 
 * **Live Demo (Google Cloud Run)**: [CiviQ-AI](https://civiq-ai-1070344786559.us-central1.run.app/)
+
 ---
 
 ## 🎯 My Chosen Vertical
