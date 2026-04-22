@@ -1,7 +1,14 @@
-.git
+﻿node_modules/
+tests/
+coverage/
+.env
 .gitignore
-Dockerfile
 .dockerignore
+.vscode/
+package.json
+package-lock.json
+jest.config.js
+.eslintrc.js
+.prettierrc
 README.md
 INSTRUCTIONS.md
-LICENSE
