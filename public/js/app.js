@@ -324,6 +324,13 @@ function isIndia(country) {
   return c === "india" || c === "bharat";
 }
 
+const allowedTopics = [
+  "vote", "election", "voter", "eci", "commission", "poll", "booth", "candidate", 
+  "party", "register", "form", "identity", "card", "epic", "register", "result", 
+  "timeline", "myth", "fact", "simulation", "process", "rule", "law", "citizen",
+  "responsible", "democracy", "leader", "chief", "minister", "parliament", "assembly"
+];
+
 function isElectionQuery(text) {
   const q = (text || "").toLowerCase();
   return allowedTopics.some((w) => q.includes(w));
