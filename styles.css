@@ -501,6 +501,31 @@ body[data-theme="dark"] .modal-body small {
   .app-shell {
     margin-top: 1rem;
   }
+
+  /* Make hero header elements wrap and center neatly */
+  .hero-tools {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .badge {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto 0.8rem;
+    border-radius: 8px; /* Fix pill shape distortion */
+    padding: 0.4rem 0.8rem;
+  }
+
+  .header-logo-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
 }
 
 /* =========================================
