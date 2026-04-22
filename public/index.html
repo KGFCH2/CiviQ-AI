@@ -39,12 +39,14 @@
       <header class="hero">
         <div class="hero-tools">
           <p class="badge" data-en="PromptWars: Virtual - Challenge Build">PromptWars: Virtual - Challenge Build</p>
-          <span id="aiStatus" class="ai-status-off" title="AI mode: OFF"><i class="fas fa-robot"></i> OFF</span>
-          <button id="settingsBtn" type="button" class="icon-btn" title="Settings" aria-label="Settings"><i class="fas fa-cog"></i></button>
-          <button id="themeToggle" type="button" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
-            <i class="fas fa-sun sun-icon"></i>
-            <i class="fas fa-moon moon-icon"></i>
-          </button>
+          <div class="hero-actions">
+            <span id="aiStatus" class="ai-status-off" title="AI mode: OFF"><i class="fas fa-robot"></i> OFF</span>
+            <button id="settingsBtn" type="button" class="icon-btn" title="Settings" aria-label="Settings"><i class="fas fa-cog"></i></button>
+            <button id="themeToggle" type="button" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+              <i class="fas fa-sun sun-icon"></i>
+              <i class="fas fa-moon moon-icon"></i>
+            </button>
+          </div>
         </div>
         <div class="header-logo-row">
           <img src="./assets/favicon.png?v=6" alt="CiviQ AI Logo" class="portal-logo" />
@@ -87,7 +89,7 @@
           </label>
           <label>
             <span><i class="fa-solid fa-earth-asia"></i> <span data-en="Country">Country</span></span>
-            <input id="country" type="text" value="India" placeholder="India" data-en-placeholder="India" />
+            <input id="country" type="text" value="India" placeholder="India" readonly />
           </label>
           <label>
             <span><i class="fa-solid fa-person-booth"></i> <span data-en="First-time voter">First-time voter</span></span>

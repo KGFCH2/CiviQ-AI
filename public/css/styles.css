@@ -509,6 +509,12 @@ body[data-theme="dark"] .modal-body small {
     margin-top: 1rem;
   }
 
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
   /* Make hero header elements wrap and center neatly */
   .hero-tools {
     flex-wrap: wrap;
