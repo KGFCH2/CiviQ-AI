@@ -1,7 +1,16 @@
-# System Files
+﻿# System Files
 .DS_Store
 Thumbs.db
 desktop.ini
 
 # Editor / IDE
 .vscode/
+
+# Dependencies
+node_modules/
+
+# Testing
+coverage/
+
+# Environment Variables
+.env
