@@ -137,20 +137,25 @@
           <textarea
             id="userInput"
             rows="4"
+            aria-label="Input your election-related question or topic here"
             placeholder="Type your election-related question, statement, or topic..."
             data-en-placeholder="Type your election-related question, statement, or topic..."
           ></textarea>
         </label>
 
         <div class="actions">
-          <button id="generateBtn" type="button" data-en="Generate Response">Generate Response</button>
-          <button id="resetBtn" type="button" class="ghost" data-en="Reset">Reset</button>
+          <button id="generateBtn" type="button" aria-label="Generate an AI Response" data-en="Generate Response">Generate Response</button>
+          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form" data-en="Reset">Reset</button>
         </div>
 
-        <article id="output" class="output" aria-live="polite">
+        <article id="output" class="output" aria-live="polite" aria-atomic="true">
           <h3 data-en="Response">Response</h3>
           <p data-en="Your result will appear here.">Your result will appear here.</p>
         </article>
+        
+        <div style="text-align: right; margin-top: 1rem; opacity: 0.6;">
+          <small><i>Powered by Google Translate & Groq</i></small>
+        </div>
       </section>
     </main>
 
