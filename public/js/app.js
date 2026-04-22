@@ -1,19 +1,9 @@
 const allowedTopics = [
-  "election",
-  "vote",
-  "voter",
-  "registration",
-  "poll",
-  "candidate",
-  "ballot",
-  "campaign",
-  "result",
-  "civic",
-  "democracy",
-  "chunav",
-  "मतदान",
-  "चुनाव",
-  "voting"
+  "vote", "election", "voter", "eci", "commission", "poll", "booth", "candidate", 
+  "party", "register", "form", "identity", "card", "epic", "result", 
+  "timeline", "myth", "fact", "simulation", "process", "rule", "law", "citizen",
+  "responsible", "democracy", "leader", "chief", "minister", "parliament", "assembly",
+  "registration", "ballot", "campaign", "civic", "chunav", "मतदान", "चुनाव", "voting"
 ];
 
 const TRANSLATIONS = {
@@ -323,13 +313,6 @@ function isIndia(country) {
   const c = (country || "").toLowerCase().trim();
   return c === "india" || c === "bharat";
 }
-
-const allowedTopics = [
-  "vote", "election", "voter", "eci", "commission", "poll", "booth", "candidate", 
-  "party", "register", "form", "identity", "card", "epic", "register", "result", 
-  "timeline", "myth", "fact", "simulation", "process", "rule", "law", "citizen",
-  "responsible", "democracy", "leader", "chief", "minister", "parliament", "assembly"
-];
 
 function isElectionQuery(text) {
   const q = (text || "").toLowerCase();
