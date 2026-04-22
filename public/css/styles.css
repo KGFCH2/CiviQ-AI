@@ -500,6 +500,12 @@ body[data-theme="dark"] .modal-body small {
   border-top: 1px solid var(--border);
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 @media (max-width: 760px) {
   .grid {
     grid-template-columns: 1fr;
@@ -507,12 +513,6 @@ body[data-theme="dark"] .modal-body small {
 
   .app-shell {
     margin-top: 1rem;
-  }
-
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
   }
 
   /* Make hero header elements wrap and center neatly */
