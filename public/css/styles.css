@@ -670,16 +670,85 @@ body[data-theme="dark"] .modal-body small {
 }
 
 @keyframes pulseText {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
 
 .footer-credit {
-  text-align: right;
-  margin-top: 1rem;
-  opacity: 0.6;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
 }
+
+.google-services-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.google-svc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--brand-soft);
+  color: var(--brand);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.google-svc-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
+  border-color: var(--brand);
+}
+
+#googleSignInPlaceholder {
+  background: white;
+  color: #757575;
+  border: 1px solid #ddd;
+}
+
+#googleSignInPlaceholder i {
+  color: #4285f4;
+}
+
+.map-preview {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.map-preview h4 {
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .google-services-cluster {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
