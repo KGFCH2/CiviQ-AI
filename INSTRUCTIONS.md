@@ -6,15 +6,15 @@ Welcome to the internal architecture guide for **CiviQ AI**, an intelligent, mob
 
 ## 🏗️ Core Application Files
 
-### 1. `index.html`
+### 1. `public/index.html`
 * **Purpose:** The structural backbone of the web app.
 * **Working Principle:** It provides the semantic skeleton. It incorporates the "Settings" modal, handles viewport responsiveness via `meta` tags, enforces security rules with a strict **Content Security Policy (CSP)**, and supplies internal structured `JSON-LD` data directly to Google's Search Engine for SEO indexing.
 
-### 2. `styles.css`
+### 2. `public/css/styles.css`
 * **Purpose:** The visual engine determining the app's aesthetics.
 * **Working Principle:** Designed entirely vanilla without frameworks, it utilizes CSS variables for rapid mode-switching (Light / Dark modes). It uses fluid layout techniques (`min()`, Grid, Flexbox) and `@media` queries to ensure flawless behavior on mobile screens. It also handles accessible features like `focus-visible` pseudo-classes for users parsing via the keyboard `TAB` key.
 
-### 3. `app.js`
+### 3. `public/js/app.js`
 * **Purpose:** The intelligent client-side logic center.
 * **Working Principle:** It operates independently in the browser and drives all the interactivity. It handles:
   * **Event Listeners:** Grabbing input from the UI interface.
@@ -29,7 +29,7 @@ Welcome to the internal architecture guide for **CiviQ AI**, an intelligent, mob
 
 ### 4. `Dockerfile`
 * **Purpose:** Standardizes the software into a lightweight, portable container.
-* **Working Principle:** Pulls the lightweight `nginx:alpine` image. It copies our raw HTML/CSS/JS files into the `/usr/share/nginx/html` directory, preparing a micro-server environment capable of instantly deploying our site to Heroku, AWS, or GCP without configuration headaches. 
+* **Working Principle:** Pulls the lightweight `nginx:alpine` image. It copies our raw `public/` files into the `/usr/share/nginx/html` directory, preparing a micro-server environment capable of instantly deploying our site to Heroku, AWS, or GCP without configuration headaches. 
 
 ### 5. `nginx.conf.template`
 * **Purpose:** The routing instructions for the Docker NGINX proxy.
