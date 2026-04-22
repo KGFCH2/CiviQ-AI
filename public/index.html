@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Security: Content Security Policy (CSP) mitigating XSS risks -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com;" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com;"
+    />
     <title>CiviQ AI - Election Process Education</title>
     <!-- Google Services: Structured Data (JSON-LD) for better Google Search Indexing -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "CiviQ AI",
-      "applicationCategory": "EducationalApplication",
-      "description": "A smart and friendly civic education assistant for election literacy.",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0" }
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CiviQ AI",
+        "applicationCategory": "EducationalApplication",
+        "description": "A smart and friendly civic education assistant for election literacy.",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0" }
+      }
     </script>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png?v=6" />
     <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon.png?v=6" />
@@ -27,7 +30,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Context-Based Initial Loader -->
@@ -38,11 +44,29 @@
     <main class="app-shell">
       <header class="hero">
         <div class="hero-tools">
-          <p class="badge" data-en="PromptWars: Virtual - Challenge Build">PromptWars: Virtual - Challenge Build</p>
+          <p class="badge" data-en="PromptWars: Virtual - Challenge Build">
+            PromptWars: Virtual - Challenge Build
+          </p>
           <div class="hero-actions">
-            <span id="aiStatus" class="ai-status-off" title="AI mode: OFF"><i class="fas fa-robot"></i> OFF</span>
-            <button id="settingsBtn" type="button" class="icon-btn" title="Settings" aria-label="Settings"><i class="fas fa-cog"></i></button>
-            <button id="themeToggle" type="button" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+            <span id="aiStatus" class="ai-status-off" title="AI mode: OFF"
+              ><i class="fas fa-robot"></i> OFF</span
+            >
+            <button
+              id="settingsBtn"
+              type="button"
+              class="icon-btn"
+              title="Settings"
+              aria-label="Settings"
+            >
+              <i class="fas fa-cog"></i>
+            </button>
+            <button
+              id="themeToggle"
+              type="button"
+              class="theme-toggle"
+              title="Toggle Theme"
+              aria-label="Toggle Theme"
+            >
               <i class="fas fa-sun sun-icon"></i>
               <i class="fas fa-moon moon-icon"></i>
             </button>
@@ -52,30 +76,58 @@
           <img src="./assets/favicon.png?v=6" alt="CiviQ AI Logo" class="portal-logo" />
           <h1 data-en="CiviQ AI">CiviQ AI</h1>
         </div>
-        <p class="subtitle" data-en="A smart and friendly civic education assistant for election literacy.">A smart and friendly civic education assistant for election literacy.</p>
+        <p
+          class="subtitle"
+          data-en="A smart and friendly civic education assistant for election literacy."
+        >
+          A smart and friendly civic education assistant for election literacy.
+        </p>
       </header>
 
       <!-- Settings Modal -->
       <div id="settingsModal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-            <h2><i class="fa-solid fa-shield-halved"></i> <span data-en="API Settings">API Settings</span></h2>
+            <h2>
+              <i class="fa-solid fa-shield-halved"></i>
+              <span data-en="API Settings">API Settings</span>
+            </h2>
             <button id="closeSettings" type="button" class="close-btn">×</button>
           </div>
           <div class="modal-body">
             <label>
               <span data-en="AI API Key">AI API Key</span>
               <div class="input-wrapper">
-                <input id="geminiKey" type="password" placeholder="Paste your Groq API key (gsk_...) here..." data-en-placeholder="Paste your Groq API key (gsk_...) here..." />
-                <button id="toggleApiKey" type="button" class="field-icon-btn" aria-label="Toggle API Key visibility">
+                <input
+                  id="geminiKey"
+                  type="password"
+                  placeholder="Paste your Groq API key (gsk_...) here..."
+                  data-en-placeholder="Paste your Groq API key (gsk_...) here..."
+                />
+                <button
+                  id="toggleApiKey"
+                  type="button"
+                  class="field-icon-btn"
+                  aria-label="Toggle API Key visibility"
+                >
                   <i class="fas fa-eye"></i>
                 </button>
               </div>
-              <small><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" data-en="Get API key from Groq Cloud Console">Get API key from Groq Cloud Console</a></small>
+              <small
+                ><a
+                  href="https://console.groq.com/keys"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-en="Get API key from Groq Cloud Console"
+                  >Get API key from Groq Cloud Console</a
+                ></small
+              >
             </label>
             <label>
               <input id="useGemini" type="checkbox" />
-              <span data-en="Enable AI-powered responses (Groq)">Enable AI-powered responses (Groq)</span>
+              <span data-en="Enable AI-powered responses (Groq)"
+                >Enable AI-powered responses (Groq)</span
+              >
             </label>
           </div>
           <div class="modal-footer">
@@ -86,25 +138,42 @@
       </div>
 
       <section class="card profile-card">
-        <h2><i class="fa-solid fa-id-card"></i> <span data-en="User Profile">User Profile</span></h2>
+        <h2>
+          <i class="fa-solid fa-id-card"></i> <span data-en="User Profile">User Profile</span>
+        </h2>
         <div class="grid">
           <label>
             <span><i class="fa-solid fa-calendar-days"></i> <span data-en="Age">Age</span></span>
-            <input id="age" type="number" min="10" max="120" placeholder="e.g. 19" data-en-placeholder="e.g. 19" />
+            <input
+              id="age"
+              type="number"
+              min="10"
+              max="120"
+              placeholder="e.g. 19"
+              data-en-placeholder="e.g. 19"
+            />
           </label>
           <label>
-            <span><i class="fa-solid fa-earth-asia"></i> <span data-en="Country">Country</span></span>
+            <span
+              ><i class="fa-solid fa-earth-asia"></i> <span data-en="Country">Country</span></span
+            >
             <input id="country" type="text" value="India" placeholder="India" readonly />
           </label>
           <label>
-            <span><i class="fa-solid fa-person-booth"></i> <span data-en="First-time voter">First-time voter</span></span>
+            <span
+              ><i class="fa-solid fa-person-booth"></i>
+              <span data-en="First-time voter">First-time voter</span></span
+            >
             <select id="firstTime">
               <option value="Yes" data-en="Yes">Yes</option>
               <option value="No" data-en="No">No</option>
             </select>
           </label>
           <label>
-            <span><i class="fa-solid fa-language"></i> <span data-en="Portal Language">Portal Language</span></span>
+            <span
+              ><i class="fa-solid fa-language"></i>
+              <span data-en="Portal Language">Portal Language</span></span
+            >
             <select id="portalLanguage">
               <option value="en">English</option>
               <option value="hi">Hindi (हिन्दी)</option>
@@ -122,7 +191,10 @@
             </select>
           </label>
           <label>
-            <span><i class="fa-solid fa-ear-listen"></i> <span data-en="Answer Language">Answer Language</span></span>
+            <span
+              ><i class="fa-solid fa-ear-listen"></i>
+              <span data-en="Answer Language">Answer Language</span></span
+            >
             <select id="language">
               <option value="en">English</option>
               <option value="hi">Hindi (हिन्दी)</option>
@@ -140,7 +212,10 @@
             </select>
           </label>
           <label>
-            <span><i class="fa-solid fa-list-check"></i> <span data-en="Task Mode">Task Mode</span></span>
+            <span
+              ><i class="fa-solid fa-list-check"></i>
+              <span data-en="Task Mode">Task Mode</span></span
+            >
             <select id="mode">
               <option value="A" data-en="A - General Question">A - General Question</option>
               <option value="B" data-en="B - Election Process">B - Election Process</option>
@@ -155,9 +230,13 @@
       </section>
 
       <section class="card chat-card">
-        <h2><i class="fa-solid fa-comment-dots"></i> <span data-en="Ask CiviQ AI">Ask CiviQ AI</span></h2>
+        <h2>
+          <i class="fa-solid fa-comment-dots"></i> <span data-en="Ask CiviQ AI">Ask CiviQ AI</span>
+        </h2>
         <label>
-          <span><i class="fa-solid fa-keyboard"></i> <span data-en="User Input">User Input</span></span>
+          <span
+            ><i class="fa-solid fa-keyboard"></i> <span data-en="User Input">User Input</span></span
+          >
           <textarea
             id="userInput"
             rows="4"
@@ -168,16 +247,21 @@
         </label>
 
         <div class="actions">
-          <button id="generateBtn" type="button" aria-label="Generate an AI Response"><i class="fa-solid fa-bolt"></i> <span data-en="Generate Response">Generate Response</span></button>
-          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form"><i class="fa-solid fa-arrow-rotate-left"></i> <span data-en="Reset">Reset</span></button>
+          <button id="generateBtn" type="button" aria-label="Generate an AI Response">
+            <i class="fa-solid fa-bolt"></i>
+            <span data-en="Generate Response">Generate Response</span>
+          </button>
+          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form">
+            <i class="fa-solid fa-arrow-rotate-left"></i> <span data-en="Reset">Reset</span>
+          </button>
         </div>
 
         <article id="output" class="output" aria-live="polite" aria-atomic="true">
           <h3><i class="fa-solid fa-reply-all"></i> <span data-en="Response">Response</span></h3>
           <p data-en="Your result will appear here.">Your result will appear here.</p>
         </article>
-        
-        <div style="text-align: right; margin-top: 1rem; opacity: 0.6;">
+
+        <div class="footer-credit">
           <small><i>Powered by Google Translate & Groq</i></small>
         </div>
       </section>
