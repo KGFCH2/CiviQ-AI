@@ -760,9 +760,39 @@ function closeSettingsModal() {
   settingsModal.style.display = "none";
 }
 
-function saveSettings() {
+async function validateGroqKey(key) {
+  try {
+    const res = await fetch("https://api.groq.com/openai/v1/models", {
+      headers: { "Authorization": `Bearer ${key}` }
+    });
+    return res.ok;
+  } catch (e) {
+    return false;
+  }
+}
+
+async function saveSettings() {
   const keyValue = geminiKeyInput.value.trim();
   const checkboxChecked = useGeminiCheckbox.checked;
+  
+  if (checkboxChecked && keyValue) {
+    const originalText = saveSettingBtn.textContent;
+    saveSettingBtn.textContent = "Validating...";
+    saveSettingBtn.disabled = true;
+    
+    const isValid = await validateGroqKey(keyValue);
+    
+    saveSettingBtn.textContent = originalText;
+    saveSettingBtn.disabled = false;
+    
+    if (!isValid) {
+      setGeminiEnabled(false);
+      useGeminiCheckbox.checked = false;
+      updateAIStatus();
+      alert("❌ Invalid Groq API Key! Please check your key. AI mode disabled.");
+      return; 
+    }
+  }
   
   setGeminiKey(keyValue);
   
@@ -776,8 +806,8 @@ function saveSettings() {
   updateAIStatus();
   
   const msg = isGeminiEnabled() 
-    ? "✅ AI mode ENABLED!"
-    : "⚠️ AI mode DISABLED. Check API key and enable checkbox.";
+    ? "✅ API Key is Correct! AI mode ENABLED."
+    : "⚠️ AI mode DISABLED.";
   alert(msg);
 }
 
