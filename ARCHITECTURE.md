@@ -14,6 +14,10 @@ graph TD
     UI --> Logic[Core Controller - app.js]
     Logic --> AI_Check{AI Key Set?}
     
+    Logic --> GS_Active{Mode C?}
+    GS_Active -- Yes --> G_Maps[Google Maps Embed]
+    GS_Active -- No --> G_Forms[Google Feedback - Forms]
+    
     AI_Check -- Yes --> GroqAPI[Groq API - Llama 3.3]
     AI_Check -- No --> Templates[In-Built Template Engine]
     
@@ -65,6 +69,7 @@ We implement multiple layers of protection to satisfy the **Security Focus Area*
 2. **XSS Sanitization**: Reactive logic in `app.js` identifies and strips `<script>` tags from AI output before rendering.
 3. **Content Security Policy (CSP)**: A strict browser-level whitelist that blocks unauthorized network connections.
 4. **Credential Privacy (BYOK)**: API keys are stored solely in the user's `localStorage` and are never transmitted to our servers or hardcoded.
+5. **Container Hardening**: The `Dockerfile` is configured to run NGINX under a non-root `nginx` user to mitigate privilege escalation risks in Cloud Run.
 
 ---
 
