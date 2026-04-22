@@ -23,8 +23,10 @@ const TRANSLATIONS = {
     quickCheck: "Quick check",
     clarify: "Could you clarify your question in one line?",
     example: 'Example: "What documents do I need to register to vote in India?"',
-    outScope: "I focus on Indian elections, voting, registration, timelines, and civic responsibilities.",
-    askElection: 'Please ask an election-related question, for example: "How do I register to vote in India?"',
+    outScope:
+      "I focus on Indian elections, voting, registration, timelines, and civic responsibilities.",
+    askElection:
+      'Please ask an election-related question, for example: "How do I register to vote in India?"',
     indiaOnly: "This assistant is India-only. Please set country as India to continue.",
     firstTime: "You are a first-time voter, so here is a simple and careful guide.",
     young: "Here is a very simple explanation made for a younger learner.",
@@ -109,17 +111,182 @@ const TRANSLATIONS = {
     save: "बचाएं",
     cancel: "रद्द करें"
   },
-  bn: { response: "উত্তর", quickAnswer: "সংক্ষিপ্ত উত্তর", indiaOnly: "এই সহকারী শুধু ভারতের জন্য। দেশ India রাখুন।", stepByStep: "ধাপে ধাপে", electionProcess: "নির্বাচন প্রক্রিয়া (ভারত)", registerTitle: "ভোটার নিবন্ধন (ভারত)", timelineTitle: "সহজ নির্বাচন টাইমলাইন (ভারত)", mythFact: "মিথ বনাম সত্য", verdict: "রায়", explanation: "ব্যাখ্যা", correctInfo: "সঠিক তথ্য", easy15: "সহজ ব্যাখ্যা (বয়স ১৫)", myth: "মিথ", fact: "সত্য" },
-  ta: { response: "பதில்", quickAnswer: "சுருக்கமான பதில்", indiaOnly: "இந்த உதவியாளர் இந்தியாவுக்கே. நாடு India ஆக இருக்க வேண்டும்.", stepByStep: "படிப்படியாக", electionProcess: "தேர்தல் செயல்முறை (இந்தியா)", registerTitle: "வாக்களிக்க பதிவு செய்வது (இந்தியா)", timelineTitle: "எளிய தேர்தல் காலவரிசை (இந்தியா)", mythFact: "மித்யை vs உண்மை", verdict: "தீர்ப்பு", explanation: "விளக்கம்", correctInfo: "சரியான தகவல்", easy15: "எளிய விளக்கம் (வயது 15)", myth: "மித்யை", fact: "உண்மை" },
-  te: { response: "సమాధానం", quickAnswer: "చిన్న సమాధానం", indiaOnly: "ఈ సహాయకుడు భారతదేశానికి మాత్రమే. దేశాన్ని India గా ఉంచండి.", stepByStep: "దశలవారీగా", electionProcess: "ఎన్నికల ప్రక్రియ (భారతదేశం)", registerTitle: "ఓటర్ రిజిస్ట్రేషన్ (భారతదేశం)", timelineTitle: "సరళమైన ఎన్నికల టైమ్‌లైన్ (భారతదేశం)", mythFact: "మిథ్ vs ఫాక్ట్", verdict: "తీర్పు", explanation: "వివరణ", correctInfo: "సరైన సమాచారం", easy15: "సులభ వివరణ (వయసు 15)", myth: "మిథ్", fact: "నిజం" },
-  mr: { response: "उत्तर", quickAnswer: "थोडक्यात उत्तर", indiaOnly: "हा सहाय्यक फक्त भारतासाठी आहे. देश India ठेवा.", stepByStep: "स्टेप-बाय-स्टेप", electionProcess: "निवडणूक प्रक्रिया (भारत)", registerTitle: "मतदार नोंदणी (भारत)", timelineTitle: "सोपे निवडणूक वेळापत्रक (भारत)", mythFact: "समज-गैरसमज", verdict: "निकाल", explanation: "स्पष्टीकरण", correctInfo: "बरोबर माहिती", easy15: "सोपे स्पष्टीकरण (वय 15)", myth: "गैरसमज", fact: "तथ्य" },
-  gu: { response: "જવાબ", quickAnswer: "ટૂંકું જવાબ", indiaOnly: "આ સહાયક ફક્ત ભારત માટે છે. દેશ India રાખો.", stepByStep: "પગલું-દર-પગલું", electionProcess: "ચૂંટણી પ્રક્રિયા (ભારત)", registerTitle: "મતદાર નોંધણી (ભારત)", timelineTitle: "સરળ ચૂંટણી સમયરેખા (ભારત)", mythFact: "મિથ vs ફેક્ટ", verdict: "ફૈસલો", explanation: "સમજાણ", correctInfo: "સાચી માહિતી", easy15: "સરળ સમજ (ઉંમર 15)", myth: "મિથ", fact: "ફેક્ટ" },
-  kn: { response: "ಉತ್ತರ", quickAnswer: "ಸಂಕ್ಷಿಪ್ತ ಉತ್ತರ", indiaOnly: "ಈ ಸಹಾಯಕ ಭಾರತಕ್ಕೆ ಮಾತ್ರ. ದೇಶವನ್ನು India ಆಗಿ ಇಡಿ.", stepByStep: "ಹಂತ ಹಂತವಾಗಿ", electionProcess: "ಚುನಾವಣೆ ಪ್ರಕ್ರಿಯೆ (ಭಾರತ)", registerTitle: "ಮತದಾರ ನೋಂದಣಿ (ಭಾರತ)", timelineTitle: "ಸರಳ ಚುನಾವಣಾ ಕಾಲರೇಖೆ (ಭಾರತ)", mythFact: "ಮಿಥ್ vs ಫ್ಯಾಕ್ಟ್", verdict: "ತೀರ್ಪು", explanation: "ವಿವರಣೆ", correctInfo: "ಸರಿಯಾದ ಮಾಹಿತಿ", easy15: "ಸರಳ ವಿವರಣೆ (ವಯಸ್ಸು 15)", myth: "ಮಿಥ್", fact: "ಸತ್ಯ" },
-  ml: { response: "ഉത്തരം", quickAnswer: "ചുരുക്കം മറുപടി", indiaOnly: "ഈ സഹായി ഇന്ത്യയ്ക്കു മാത്രം. രാജ്യം India ആയി വെക്കുക.", stepByStep: "പടിപടിയായി", electionProcess: "തിരഞ്ഞെടുപ്പ് പ്രക്രിയ (ഇന്ത്യ)", registerTitle: "വോട്ടർ രജിസ്ട്രേഷൻ (ഇന്ത്യ)", timelineTitle: "ലളിതമായ തെരഞ്ഞെടുപ്പ് ടൈംലൈൻ (ഇന്ത്യ)", mythFact: "മിത്ത് vs ഫാക്ട്", verdict: "വിധി", explanation: "വിവരണം", correctInfo: "ശരിയായ വിവരം", easy15: "ലളിത വിശദീകരണം (വയസ് 15)", myth: "മിത്ത്", fact: "സത്യം" },
-  pa: { response: "ਜਵਾਬ", quickAnswer: "ਛੋਟਾ ਜਵਾਬ", indiaOnly: "ਇਹ ਸਹਾਇਕ ਸਿਰਫ਼ ਭਾਰਤ ਲਈ ਹੈ। ਦੇਸ਼ India ਰੱਖੋ।", stepByStep: "ਕਦਮ-ਦਰ-ਕਦਮ", electionProcess: "ਚੋਣ ਪ੍ਰਕਿਰਿਆ (ਭਾਰਤ)", registerTitle: "ਵੋਟਰ ਰਜਿਸਟ੍ਰੇਸ਼ਨ (ਭਾਰਤ)", timelineTitle: "ਸਰਲ ਚੋਣ ਟਾਈਮਲਾਈਨ (ਭਾਰਤ)", mythFact: "ਮਿਥ ਵਿਰੁੱਧ ਫੈਕਟ", verdict: "ਫੈਸਲਾ", explanation: "ਵਿਆਖਿਆ", correctInfo: "ਸਹੀ ਜਾਣਕਾਰੀ", easy15: "ਸੌਖੀ ਸਮਝ (ਉਮਰ 15)", myth: "ਮਿਥ", fact: "ਫੈਕਟ" },
-  or: { response: "ଉତ୍ତର", quickAnswer: "ସଂକ୍ଷିପ୍ତ ଉତ୍ତର", indiaOnly: "ଏହି ସହାୟକ କେବଳ ଭାରତ ପାଇଁ। ଦେଶକୁ India ରଖନ୍ତୁ।", stepByStep: "ପଦକ୍ରମରେ", electionProcess: "ନିର୍ବାଚନ ପ୍ରକ୍ରିୟା (ଭାରତ)", registerTitle: "ଭୋଟର ନିବନ୍ଧନ (ଭାରତ)", timelineTitle: "ସରଳ ନିର୍ବାଚନ ସମୟରେଖା (ଭାରତ)", mythFact: "ମିଥ୍ vs ଫ୍ୟାକ୍ଟ", verdict: "ରାୟ", explanation: "ବ୍ୟାଖ୍ୟା", correctInfo: "ଠିକ ତଥ୍ୟ", easy15: "ସହଜ ବ୍ୟାଖ୍ୟା (ବୟସ 15)", myth: "ମିଥ୍", fact: "ତଥ୍ୟ" },
-  as: { response: "উত্তৰ", quickAnswer: "চমু উত্তৰ", indiaOnly: "এই সহায়ক কেৱল ভাৰতৰ বাবে। দেশ India ৰাখক।", stepByStep: "পদে পদে", electionProcess: "নিৰ্বাচন প্ৰক্ৰিয়া (ভাৰত)", registerTitle: "ভোটাৰ পঞ্জীয়ন (ভাৰত)", timelineTitle: "সহজ নিৰ্বাচনী টাইমলাইন (ভাৰত)", mythFact: "মিথ বনাম ফেক্ট", verdict: "ৰায়", explanation: "ব্যাখ্যা", correctInfo: "সঠিক তথ্য", easy15: "সহজ ব্যাখ্যা (বয়স 15)", myth: "মিথ", fact: "তথ্য" },
-  ur: { response: "جواب", quickAnswer: "مختصر جواب", indiaOnly: "یہ اسسٹنٹ صرف بھارت کے لیے ہے۔ ملک India رکھیں۔", stepByStep: "مرحلہ وار", electionProcess: "انتخابی عمل (بھارت)", registerTitle: "ووٹر رجسٹریشن (بھارت)", timelineTitle: "سادہ انتخابی ٹائم لائن (بھارت)", mythFact: "مِتھ بمقابلہ حقیقت", verdict: "فیصلہ", explanation: "وضاحت", correctInfo: "درست معلومات", easy15: "آسان وضاحت (عمر 15)", myth: "مِتھ", fact: "حقیقت" }
+  bn: {
+    response: "উত্তর",
+    quickAnswer: "সংক্ষিপ্ত উত্তর",
+    indiaOnly: "এই সহকারী শুধু ভারতের জন্য। দেশ India রাখুন।",
+    stepByStep: "ধাপে ধাপে",
+    electionProcess: "নির্বাচন প্রক্রিয়া (ভারত)",
+    registerTitle: "ভোটার নিবন্ধন (ভারত)",
+    timelineTitle: "সহজ নির্বাচন টাইমলাইন (ভারত)",
+    mythFact: "মিথ বনাম সত্য",
+    verdict: "রায়",
+    explanation: "ব্যাখ্যা",
+    correctInfo: "সঠিক তথ্য",
+    easy15: "সহজ ব্যাখ্যা (বয়স ১৫)",
+    myth: "মিথ",
+    fact: "সত্য"
+  },
+  ta: {
+    response: "பதில்",
+    quickAnswer: "சுருக்கமான பதில்",
+    indiaOnly: "இந்த உதவியாளர் இந்தியாவுக்கே. நாடு India ஆக இருக்க வேண்டும்.",
+    stepByStep: "படிப்படியாக",
+    electionProcess: "தேர்தல் செயல்முறை (இந்தியா)",
+    registerTitle: "வாக்களிக்க பதிவு செய்வது (இந்தியா)",
+    timelineTitle: "எளிய தேர்தல் காலவரிசை (இந்தியா)",
+    mythFact: "மித்யை vs உண்மை",
+    verdict: "தீர்ப்பு",
+    explanation: "விளக்கம்",
+    correctInfo: "சரியான தகவல்",
+    easy15: "எளிய விளக்கம் (வயது 15)",
+    myth: "மித்யை",
+    fact: "உண்மை"
+  },
+  te: {
+    response: "సమాధానం",
+    quickAnswer: "చిన్న సమాధానం",
+    indiaOnly: "ఈ సహాయకుడు భారతదేశానికి మాత్రమే. దేశాన్ని India గా ఉంచండి.",
+    stepByStep: "దశలవారీగా",
+    electionProcess: "ఎన్నికల ప్రక్రియ (భారతదేశం)",
+    registerTitle: "ఓటర్ రిజిస్ట్రేషన్ (భారతదేశం)",
+    timelineTitle: "సరళమైన ఎన్నికల టైమ్‌లైన్ (భారతదేశం)",
+    mythFact: "మిథ్ vs ఫాక్ట్",
+    verdict: "తీర్పు",
+    explanation: "వివరణ",
+    correctInfo: "సరైన సమాచారం",
+    easy15: "సులభ వివరణ (వయసు 15)",
+    myth: "మిథ్",
+    fact: "నిజం"
+  },
+  mr: {
+    response: "उत्तर",
+    quickAnswer: "थोडक्यात उत्तर",
+    indiaOnly: "हा सहाय्यक फक्त भारतासाठी आहे. देश India ठेवा.",
+    stepByStep: "स्टेप-बाय-स्टेप",
+    electionProcess: "निवडणूक प्रक्रिया (भारत)",
+    registerTitle: "मतदार नोंदणी (भारत)",
+    timelineTitle: "सोपे निवडणूक वेळापत्रक (भारत)",
+    mythFact: "समज-गैरसमज",
+    verdict: "निकाल",
+    explanation: "स्पष्टीकरण",
+    correctInfo: "बरोबर माहिती",
+    easy15: "सोपे स्पष्टीकरण (वय 15)",
+    myth: "गैरसमज",
+    fact: "तथ्य"
+  },
+  gu: {
+    response: "જવાબ",
+    quickAnswer: "ટૂંકું જવાબ",
+    indiaOnly: "આ સહાયક ફક્ત ભારત માટે છે. દેશ India રાખો.",
+    stepByStep: "પગલું-દર-પગલું",
+    electionProcess: "ચૂંટણી પ્રક્રિયા (ભારત)",
+    registerTitle: "મતદાર નોંધણી (ભારત)",
+    timelineTitle: "સરળ ચૂંટણી સમયરેખા (ભારત)",
+    mythFact: "મિથ vs ફેક્ટ",
+    verdict: "ફૈસલો",
+    explanation: "સમજાણ",
+    correctInfo: "સાચી માહિતી",
+    easy15: "સરળ સમજ (ઉંમર 15)",
+    myth: "મિથ",
+    fact: "ફેક્ટ"
+  },
+  kn: {
+    response: "ಉತ್ತರ",
+    quickAnswer: "ಸಂಕ್ಷಿಪ್ತ ಉತ್ತರ",
+    indiaOnly: "ಈ ಸಹಾಯಕ ಭಾರತಕ್ಕೆ ಮಾತ್ರ. ದೇಶವನ್ನು India ಆಗಿ ಇಡಿ.",
+    stepByStep: "ಹಂತ ಹಂತವಾಗಿ",
+    electionProcess: "ಚುನಾವಣೆ ಪ್ರಕ್ರಿಯೆ (ಭಾರತ)",
+    registerTitle: "ಮತದಾರ ನೋಂದಣಿ (ಭಾರತ)",
+    timelineTitle: "ಸರಳ ಚುನಾವಣಾ ಕಾಲರೇಖೆ (ಭಾರತ)",
+    mythFact: "ಮಿಥ್ vs ಫ್ಯಾಕ್ಟ್",
+    verdict: "ತೀರ್ಪು",
+    explanation: "ವಿವರಣೆ",
+    correctInfo: "ಸರಿಯಾದ ಮಾಹಿತಿ",
+    easy15: "ಸರಳ ವಿವರಣೆ (ವಯಸ್ಸು 15)",
+    myth: "ಮಿಥ್",
+    fact: "ಸತ್ಯ"
+  },
+  ml: {
+    response: "ഉത്തരം",
+    quickAnswer: "ചുരുക്കം മറുപടി",
+    indiaOnly: "ഈ സഹായി ഇന്ത്യയ്ക്കു മാത്രം. രാജ്യം India ആയി വെക്കുക.",
+    stepByStep: "പടിപടിയായി",
+    electionProcess: "തിരഞ്ഞെടുപ്പ് പ്രക്രിയ (ഇന്ത്യ)",
+    registerTitle: "വോട്ടർ രജിസ്ട്രേഷൻ (ഇന്ത്യ)",
+    timelineTitle: "ലളിതമായ തെരഞ്ഞെടുപ്പ് ടൈംലൈൻ (ഇന്ത്യ)",
+    mythFact: "മിത്ത് vs ഫാക്ട്",
+    verdict: "വിധി",
+    explanation: "വിവരണം",
+    correctInfo: "ശരിയായ വിവരം",
+    easy15: "ലളിത വിശദീകരണം (വയസ് 15)",
+    myth: "മിത്ത്",
+    fact: "സത്യം"
+  },
+  pa: {
+    response: "ਜਵਾਬ",
+    quickAnswer: "ਛੋਟਾ ਜਵਾਬ",
+    indiaOnly: "ਇਹ ਸਹਾਇਕ ਸਿਰਫ਼ ਭਾਰਤ ਲਈ ਹੈ। ਦੇਸ਼ India ਰੱਖੋ।",
+    stepByStep: "ਕਦਮ-ਦਰ-ਕਦਮ",
+    electionProcess: "ਚੋਣ ਪ੍ਰਕਿਰਿਆ (ਭਾਰਤ)",
+    registerTitle: "ਵੋਟਰ ਰਜਿਸਟ੍ਰੇਸ਼ਨ (ਭਾਰਤ)",
+    timelineTitle: "ਸਰਲ ਚੋਣ ਟਾਈਮਲਾਈਨ (ਭਾਰਤ)",
+    mythFact: "ਮਿਥ ਵਿਰੁੱਧ ਫੈਕਟ",
+    verdict: "ਫੈਸਲਾ",
+    explanation: "ਵਿਆਖਿਆ",
+    correctInfo: "ਸਹੀ ਜਾਣਕਾਰੀ",
+    easy15: "ਸੌਖੀ ਸਮਝ (ਉਮਰ 15)",
+    myth: "ਮਿਥ",
+    fact: "ਫੈਕਟ"
+  },
+  or: {
+    response: "ଉତ୍ତର",
+    quickAnswer: "ସଂକ୍ଷିପ୍ତ ଉତ୍ତର",
+    indiaOnly: "ଏହି ସହାୟକ କେବଳ ଭାରତ ପାଇଁ। ଦେଶକୁ India ରଖନ୍ତୁ।",
+    stepByStep: "ପଦକ୍ରମରେ",
+    electionProcess: "ନିର୍ବାଚନ ପ୍ରକ୍ରିୟା (ଭାରତ)",
+    registerTitle: "ଭୋଟର ନିବନ୍ଧନ (ଭାରତ)",
+    timelineTitle: "ସରଳ ନିର୍ବାଚନ ସମୟରେଖା (ଭାରତ)",
+    mythFact: "ମିଥ୍ vs ଫ୍ୟାକ୍ଟ",
+    verdict: "ରାୟ",
+    explanation: "ବ୍ୟାଖ୍ୟା",
+    correctInfo: "ଠିକ ତଥ୍ୟ",
+    easy15: "ସହଜ ବ୍ୟାଖ୍ୟା (ବୟସ 15)",
+    myth: "ମିଥ୍",
+    fact: "ତଥ୍ୟ"
+  },
+  as: {
+    response: "উত্তৰ",
+    quickAnswer: "চমু উত্তৰ",
+    indiaOnly: "এই সহায়ক কেৱল ভাৰতৰ বাবে। দেশ India ৰাখক।",
+    stepByStep: "পদে পদে",
+    electionProcess: "নিৰ্বাচন প্ৰক্ৰিয়া (ভাৰত)",
+    registerTitle: "ভোটাৰ পঞ্জীয়ন (ভাৰত)",
+    timelineTitle: "সহজ নিৰ্বাচনী টাইমলাইন (ভাৰত)",
+    mythFact: "মিথ বনাম ফেক্ট",
+    verdict: "ৰায়",
+    explanation: "ব্যাখ্যা",
+    correctInfo: "সঠিক তথ্য",
+    easy15: "সহজ ব্যাখ্যা (বয়স 15)",
+    myth: "মিথ",
+    fact: "তথ্য"
+  },
+  ur: {
+    response: "جواب",
+    quickAnswer: "مختصر جواب",
+    indiaOnly: "یہ اسسٹنٹ صرف بھارت کے لیے ہے۔ ملک India رکھیں۔",
+    stepByStep: "مرحلہ وار",
+    electionProcess: "انتخابی عمل (بھارت)",
+    registerTitle: "ووٹر رجسٹریشن (بھارت)",
+    timelineTitle: "سادہ انتخابی ٹائم لائن (بھارت)",
+    mythFact: "مِتھ بمقابلہ حقیقت",
+    verdict: "فیصلہ",
+    explanation: "وضاحت",
+    correctInfo: "درست معلومات",
+    easy15: "آسان وضاحت (عمر 15)",
+    myth: "مِتھ",
+    fact: "حقیقت"
+  }
 };
 
 const state = { simulation: { stage: "idle", choice: "" } };
@@ -164,10 +331,10 @@ function isElectionQuery(text) {
 
 function profile() {
   return {
-    age: Number(ageInput.value) || null,
-    country: (countryInput.value || "India").trim(),
-    firstTime: firstTimeInput.value === "Yes",
-    lang: languageInput.value || "en"
+    age: ageInput ? Number(ageInput.value) : null,
+    country: (countryInput ? countryInput.value : "India").trim(),
+    firstTime: firstTimeInput ? firstTimeInput.value === "Yes" : false,
+    lang: languageInput ? languageInput.value : "en"
   };
 }
 
@@ -471,7 +638,8 @@ function modeE(input, p) {
 
   const q = input.toLowerCase();
   let verdict = t(p.lang, "fact");
-  let explanation = "This statement generally matches election rules when using official processes.";
+  let explanation =
+    "This statement generally matches election rules when using official processes.";
   let correctInfo = "Always verify details on official Election Commission sources.";
 
   if (q.includes("my vote is not secret") || q.includes("people can see my vote")) {
@@ -524,7 +692,11 @@ function modeF(input, p) {
       `;
     }
 
-    state.simulation.choice = clean.replace("candidate ", "Candidate ").replace("a", "A").replace("b", "B").replace("c", "C");
+    state.simulation.choice = clean
+      .replace("candidate ", "Candidate ")
+      .replace("a", "A")
+      .replace("b", "B")
+      .replace("c", "C");
     state.simulation.stage = "waiting-confirm";
 
     return `
@@ -582,51 +754,6 @@ function modeG(input, p) {
   `;
 }
 
-async function generate() {
-  const p = profile();
-  const mode = modeInput.value;
-  const input = userInput.value.trim();
-
-  if (!isIndia(p.country)) {
-    render(indiaOnlyBlock(p));
-    return;
-  }
-
-  let html = "";
-  switch (mode) {
-    case "A":
-      html = modeA(input, p);
-      break;
-    case "B":
-      html = modeB(p);
-      break;
-    case "C":
-      html = modeC(p);
-      break;
-    case "D":
-      html = modeD(p);
-      break;
-    case "E":
-      html = modeE(input, p);
-      break;
-    case "F":
-      html = modeF(input, p);
-      break;
-    case "G":
-      html = modeG(input, p);
-      break;
-    default:
-      html = unclearQuestionBlock(p);
-  }
-
-  if (p.lang !== "en") {
-    render(`<h3>${t(p.lang, "response")}</h3><p>${t(p.lang, "quickCheck")}...</p>`);
-  }
-
-  const translated = await translateHtmlResponse(html, p.lang);
-  render(translated);
-}
-
 function resetApp() {
   ageInput.value = "";
   countryInput.value = "India";
@@ -637,7 +764,9 @@ function resetApp() {
   userInput.value = "";
   state.simulation.stage = "idle";
   state.simulation.choice = "";
-  render("<h3 data-en=\"Response\">Response</h3><p data-en=\"Your result will appear here.\">Your result will appear here.</p>");
+  render(
+    '<h3 data-en="Response">Response</h3><p data-en="Your result will appear here.">Your result will appear here.</p>'
+  );
   void applyPortalLanguage(getPortalLang());
 }
 
@@ -688,9 +817,9 @@ async function callGeminiAPI(prompt) {
 
   const response = await fetch(url, {
     method: "POST",
-    headers: { 
+    headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${key}`
+      Authorization: `Bearer ${key}`
     },
     body: JSON.stringify(body)
   });
@@ -749,6 +878,7 @@ const useGeminiCheckbox = document.getElementById("useGemini");
 const aiStatusIndicator = document.getElementById("aiStatus");
 
 function updateAIStatus() {
+  if (!aiStatusIndicator) return;
   if (isGeminiEnabled()) {
     aiStatusIndicator.innerHTML = '<i class="fas fa-robot"></i> ON';
     aiStatusIndicator.className = "ai-status-on";
@@ -761,10 +891,10 @@ function updateAIStatus() {
 function openSettingsModal() {
   const key = getGeminiKey();
   const enabled = localStorage.getItem("civiq-use-ai") === "true";
-  
+
   geminiKeyInput.value = key;
   useGeminiCheckbox.checked = enabled;
-  
+
   settingsModal.style.display = "flex";
 }
 
@@ -775,10 +905,10 @@ function closeSettingsModal() {
 async function validateGroqKey(key) {
   try {
     const res = await fetch("https://api.groq.com/openai/v1/models", {
-      headers: { "Authorization": `Bearer ${key}` }
+      headers: { Authorization: `Bearer ${key}` }
     });
     return res.ok;
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -786,38 +916,38 @@ async function validateGroqKey(key) {
 async function saveSettings() {
   const keyValue = geminiKeyInput.value.trim();
   const checkboxChecked = useGeminiCheckbox.checked;
-  
+
   if (checkboxChecked && keyValue) {
     const originalText = saveSettingBtn.textContent;
     saveSettingBtn.textContent = "Validating...";
     saveSettingBtn.disabled = true;
-    
+
     const isValid = await validateGroqKey(keyValue);
-    
+
     saveSettingBtn.textContent = originalText;
     saveSettingBtn.disabled = false;
-    
+
     if (!isValid) {
       setGeminiEnabled(false);
       useGeminiCheckbox.checked = false;
       updateAIStatus();
       alert("❌ Invalid Groq API Key! Please check your key. AI mode disabled.");
-      return; 
+      return;
     }
   }
-  
+
   setGeminiKey(keyValue);
-  
+
   if (checkboxChecked && keyValue) {
     setGeminiEnabled(true);
   } else {
     setGeminiEnabled(false);
   }
-  
+
   closeSettingsModal();
   updateAIStatus();
-  
-  const msg = isGeminiEnabled() 
+
+  const msg = isGeminiEnabled()
     ? "✅ API Key is Correct! AI mode ENABLED."
     : "⚠️ AI mode DISABLED.";
   alert(msg);
@@ -828,7 +958,7 @@ closeSettingsBtn?.addEventListener("click", closeSettingsModal);
 saveSettingBtn?.addEventListener("click", saveSettings);
 cancelSettingBtn?.addEventListener("click", closeSettingsModal);
 
-document.getElementById("toggleApiKey")?.addEventListener("click", function() {
+document.getElementById("toggleApiKey")?.addEventListener("click", function () {
   const input = document.getElementById("geminiKey");
   const icon = this.querySelector("i");
   if (input.type === "password") {
@@ -845,7 +975,7 @@ settingsModal?.addEventListener("click", (e) => {
   if (e.target === settingsModal) closeSettingsModal();
 });
 
-generateBtn.addEventListener("click", async () => {
+generateBtn?.addEventListener("click", async () => {
   const p = profile();
   const mode = document.getElementById("qMode")?.value || modeInput.value;
   const input = userInput.value.trim();
@@ -867,38 +997,69 @@ generateBtn.addEventListener("click", async () => {
       render(html);
     } catch (err) {
       console.error("AI Error:", err.message);
-      render(`<h3>${t(p.lang, "response")}</h3><p style="color:var(--accent)"><strong>Error:</strong> ${esc(err.message)}</p><p>Falling back to template mode...</p>`);
+      render(
+        `<h3>${t(p.lang, "response")}</h3><p style="color:var(--accent)"><strong>Error:</strong> ${esc(err.message)}</p><p>Falling back to template mode...</p>`
+      );
       // Use original function logic manually to avoid loop
-      let fallbackHtml = "";
+      let fallbackHtml;
       switch (mode) {
-        case "A": fallbackHtml = modeA(input, p); break;
-        case "B": fallbackHtml = modeB(p); break;
-        case "C": fallbackHtml = modeC(p); break;
-        case "D": fallbackHtml = modeD(p); break;
-        case "E": fallbackHtml = modeE(input, p); break;
-        case "F": fallbackHtml = modeF(input, p); break;
-        case "G": fallbackHtml = modeG(input, p); break;
-        default: fallbackHtml = unclearQuestionBlock(p);
+        case "A":
+          fallbackHtml = modeA(input, p);
+          break;
+        case "B":
+          fallbackHtml = modeB(p);
+          break;
+        case "C":
+          fallbackHtml = modeC(p);
+          break;
+        case "D":
+          fallbackHtml = modeD(p);
+          break;
+        case "E":
+          fallbackHtml = modeE(input, p);
+          break;
+        case "F":
+          fallbackHtml = modeF(input, p);
+          break;
+        case "G":
+          fallbackHtml = modeG(input, p);
+          break;
+        default:
+          fallbackHtml = unclearQuestionBlock(p);
       }
       const translated = await translateHtmlResponse(fallbackHtml, p.lang);
       render(translated);
     }
   } else {
     // Standard template generation
-    let html = "";
+    let html;
     switch (mode) {
-      case "A": html = modeA(input, p); break;
-      case "B": html = modeB(p); break;
-      case "C": html = modeC(p); break;
-      case "D": html = modeD(p); break;
-      case "E": html = modeE(input, p); break;
-      case "F": html = modeF(input, p); break;
-      case "G": html = modeG(input, p); break;
-      default: html = unclearQuestionBlock(p);
+      case "A":
+        html = modeA(input, p);
+        break;
+      case "B":
+        html = modeB(p);
+        break;
+      case "C":
+        html = modeC(p);
+        break;
+      case "D":
+        html = modeD(p);
+        break;
+      case "E":
+        html = modeE(input, p);
+        break;
+      case "F":
+        html = modeF(input, p);
+        break;
+      case "G":
+        html = modeG(input, p);
+        break;
+      default:
+        html = unclearQuestionBlock(p);
     }
     const translated = await translateHtmlResponse(html, p.lang);
     render(translated);
-
   }
 });
 
@@ -914,11 +1075,11 @@ window.addEventListener("load", () => {
   }
 });
 
-resetBtn.addEventListener("click", resetApp);
-portalLanguageInput.addEventListener("change", () => {
+resetBtn?.addEventListener("click", resetApp);
+portalLanguageInput?.addEventListener("change", () => {
   void applyPortalLanguage(getPortalLang());
 });
-themeToggleBtn.addEventListener("click", () => {
+themeToggleBtn?.addEventListener("click", () => {
   const next = document.body.dataset.theme === "dark" ? "light" : "dark";
   setTheme(next);
 });
@@ -936,16 +1097,22 @@ updateAIStatus();
     console.group("CiviQ AI: System Internal Tests Check");
     console.assert(isIndia("India") === true, "Test Failed: isIndia logic");
     console.assert(isIndia("USA") === false, "Test Failed: isIndia logic");
-    console.assert(isElectionQuery("What is voting?") === true, "Test Failed: Election query matching");
-    console.assert(isElectionQuery("How to bake a cake?") === false, "Test Failed: Election out-of-scope logic");
-    
+    console.assert(
+      isElectionQuery("What is voting?") === true,
+      "Test Failed: Election query matching"
+    );
+    console.assert(
+      isElectionQuery("How to bake a cake?") === false,
+      "Test Failed: Election out-of-scope logic"
+    );
+
     // Testing validation logic structurally
     const profileTest = profile();
     console.assert(typeof profileTest.lang === "string", "Test Failed: Profile language");
 
     console.log("✅ All Internal Validation assertions passed.");
     console.groupEnd();
-  } catch(e) {
-    console.error("Test execution encountered an error:", e);
+  } catch (err) {
+    console.error("Test execution encountered an error:", err);
   }
 })();
