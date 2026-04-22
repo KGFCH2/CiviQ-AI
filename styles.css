@@ -30,6 +30,13 @@ body[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+/* Accessibility: High-contrast focus state for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 body {
   margin: 0;
   font-family: "Manrope", sans-serif;
