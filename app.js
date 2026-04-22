@@ -738,10 +738,10 @@ const aiStatusIndicator = document.getElementById("aiStatus");
 
 function updateAIStatus() {
   if (isGeminiEnabled()) {
-    aiStatusIndicator.textContent = "AI ON";
+    aiStatusIndicator.innerHTML = '<i class="fas fa-robot"></i> ON';
     aiStatusIndicator.className = "ai-status-on";
   } else {
-    aiStatusIndicator.textContent = "AI OFF";
+    aiStatusIndicator.innerHTML = '<i class="fas fa-robot"></i> OFF';
     aiStatusIndicator.className = "ai-status-off";
   }
 }
