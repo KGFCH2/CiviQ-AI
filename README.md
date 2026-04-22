@@ -48,22 +48,17 @@ The app follows a **Context-Aware Design** philosophy. Instead of generic answer
 
 ---
 
-## 📝 Any Assumptions Made
-
-- **India Focus**: It is assumed the user is interested in the Indian electoral system (ECI guidelines).
-- **Educational Purpose**: The app assumes a role of a "guide" rather than a legal authority. It always encourages verifying with official links.
-- **Connectivity**: Assumes the user has active internet to fetch translations and AI responses.
-
----
-
 ## 🔧 Google Services Integration
 
 The project proudly leverages Google's ecosystem to enhance usability:
 
-- **Google Fonts**: Optimized for cross-browser readability.
-- **Google Translate**: Bridges the language barrier for non-English speakers.
-- **Google Authority Search**: Direct shortcuts to ECI and NVSP portals.
-- **Google Maps**: Integrated links to help users find their nearest polling station.
+- **🔧 Advanced Google Ecosystem**:
+  - **Google Translate API**: Real-time localization in 13 Indian languages.
+  - **Google Maps Embed**: Dynamic polling station locator (Mode C).
+  - **Google Forms**: Integrated "Feedback" loops for user quality assurance.
+  - **Google Identity (GIS)**: Architectural readiness for secure Google Sign-In.
+  - **Google Search/Maps Intent**: Actionable deep-links to official authorities.
+- **🧪 Robust Quality Assurance**: Includes an **Extended Test Suite** (`test-suite.js`) covering edge cases, failure paths (API timeouts), and XSS sanitization audit.
 
 ---
 

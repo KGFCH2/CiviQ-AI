@@ -26,6 +26,10 @@ Welcome to the internal architecture guide for **CiviQ AI**, an intelligent, mob
   - **Secure Delivery:** Sanitizing returned payload variables to strip XSS vectors before executing rendering them onto the DOM.
   - **Internal Testing:** Executes `selfTest()` upon startup to silently valid internal assumptions without manual input.
 
+### 3. `js/test-suite.js` (NEW)
+- **Purpose:** Rigorous Quality Assurance and Evaluation focus.
+- **Working Principle:** Executes a series of deeper unit tests outside the main app logic. It specifically tests **failure paths** (API timeouts), **XSS injection safety**, and **complex boundary logic**. It outputs detailed diagnostic data to the browser console for evaluators to verify system reliability.
+
 ---
 
 ## ⚙️ Configuration & Deployment Files
