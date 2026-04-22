@@ -1153,7 +1153,10 @@ function handleCredentialResponse(response) {
     if (btnContainer) btnContainer.style.display = "none";
     if (profileDisplay) profileDisplay.classList.remove("hidden");
     if (userName) userName.textContent = payload.name;
-    if (userAvatar) userAvatar.src = payload.picture;
+    if (userAvatar) {
+      userAvatar.src = payload.picture;
+      userAvatar.onload = () => { userAvatar.style.display = "block"; };
+    }
 
     console.log("Welcome,", payload.name);
   }

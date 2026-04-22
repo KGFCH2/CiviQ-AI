@@ -6,7 +6,7 @@
     <!-- Security: Content Security Policy (CSP) mitigating XSS risks -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com https://maps.googleapis.com https://accounts.google.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com https://accounts.google.com; frame-src https://www.google.com https://maps.google.com https://accounts.google.com;"
+      content="default-src 'self' https://accounts.google.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://translate.googleapis.com https://maps.googleapis.com https://accounts.google.com; connect-src 'self' https://translate.googleapis.com https://api.groq.com https://accounts.google.com; frame-src 'self' https://www.google.com https://maps.google.com https://accounts.google.com;"
     />
     <title>CiviQ AI - Election Process Education</title>
     <!-- Google Services: Structured Data (JSON-LD) for better Google Search Indexing -->
@@ -265,23 +265,25 @@
 
         <div class="footer-credit">
           <div class="google-services-cluster">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGEKai3Fo6rAXIekwo1QNYHw6M9-q3ZjIaYz35ytM3O1mhZw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="google-svc-link">
-              <i class="fa-brands fa-google"></i> <span data-en="Provide Feedback (Google Forms)">Provide Feedback (Google Forms)</span>
-            </a>
-            <!-- Real Google Sign-In Button Container -->
-            <div id="googleBtnContainer"></div>
-            <!-- Dynamic Profile Display -->
-            <div id="userProfileDisplay" class="google-svc-link hidden">
-              <img id="userAvatar" src="" alt="User" style="width:20px; border-radius:50%;" />
-              <span id="userName">Not Signed In</span>
+            <div class="google-svc-row">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGEKai3Fo6rAXIekwo1QNYHw6M9-q3ZjIaYz35ytM3O1mhZw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="google-svc-link">
+                <i class="fa-brands fa-google"></i> <span data-en="Provide Feedback (Google Forms)">Provide Feedback (Google Forms)</span>
+              </a>
+              <!-- Real Google Sign-In Button Container -->
+              <div id="googleBtnContainer"></div>
+              <!-- Dynamic Profile Display -->
+              <div id="userProfileDisplay" class="google-svc-link hidden">
+                <img id="userAvatar" src="" alt="User" />
+                <span id="userName">Not Signed In</span>
+              </div>
             </div>
-          </div>
-          <div id="googleMapContainer" class="map-preview hidden">
-             <h4 data-en="Nearby Election Offices (Google Maps)">Nearby Election Offices (Google Maps)</h4>
-             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.921319245558!2d77.22851441508253!3d28.63210198241775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd31a5555555%3A0x6d0484501a355455!2sElection%20Commission%20of%20India!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-             </iframe>
+            <div id="googleMapContainer" class="map-preview hidden">
+               <h4 data-en="Nearby Election Offices (Google Maps)">Nearby Election Offices (Google Maps)</h4>
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.921319245558!2d77.22851441508253!3d28.63210198241775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd31a5555555%3A0x6d0484501a355455!2sElection%20Commission%20of%20India!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+               </iframe>
+            </div>
           </div>
           <small><i>Powered by Google Translate, Google Maps & Groq</i></small>
         </div>
