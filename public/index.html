@@ -65,7 +65,12 @@
           <div class="modal-body">
             <label>
               <span data-en="AI API Key">AI API Key</span>
-              <input id="geminiKey" type="password" placeholder="Paste your Groq API key (gsk_...) here..." data-en-placeholder="Paste your Groq API key (gsk_...) here..." />
+              <div class="input-wrapper">
+                <input id="geminiKey" type="password" placeholder="Paste your Groq API key (gsk_...) here..." data-en-placeholder="Paste your Groq API key (gsk_...) here..." />
+                <button id="toggleApiKey" type="button" class="field-icon-btn" aria-label="Toggle API Key visibility">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
               <small><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" data-en="Get API key from Groq Cloud Console">Get API key from Groq Cloud Console</a></small>
             </label>
             <label>

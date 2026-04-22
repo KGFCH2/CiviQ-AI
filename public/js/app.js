@@ -828,6 +828,18 @@ closeSettingsBtn?.addEventListener("click", closeSettingsModal);
 saveSettingBtn?.addEventListener("click", saveSettings);
 cancelSettingBtn?.addEventListener("click", closeSettingsModal);
 
+document.getElementById("toggleApiKey")?.addEventListener("click", function() {
+  const input = document.getElementById("geminiKey");
+  const icon = this.querySelector("i");
+  if (input.type === "password") {
+    input.type = "text";
+    icon.classList.replace("fa-eye", "fa-eye-slash");
+  } else {
+    input.type = "password";
+    icon.classList.replace("fa-eye-slash", "fa-eye");
+  }
+});
+
 // Close modal on background click
 settingsModal?.addEventListener("click", (e) => {
   if (e.target === settingsModal) closeSettingsModal();

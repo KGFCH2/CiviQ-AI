@@ -438,6 +438,35 @@ body[data-theme="dark"] .modal-body {
   gap: 0.5rem;
 }
 
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem !important;
+}
+
+.field-icon-btn {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.field-icon-btn:hover {
+  color: var(--brand);
+}
+
 body[data-theme="dark"] .modal-body label {
   color: #ffffff;
 }
