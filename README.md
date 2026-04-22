@@ -72,6 +72,8 @@ The project proudly leverages Google's ecosystem to enhance usability:
 * `styles.css` — 🎨 Google-themed UI with Dark Mode support.
 * `app.js` — ⚙️ The brains: translation, AI logic, and state management.
 * `README.md` — 📖 You are here!
+* `INSTRUCTIONS.md` — 📚 Detailed Internal Architecture Guide.
+* `LICENSE` — ⚖️ Open-source MIT terms.
 
 ---
 
@@ -140,6 +142,8 @@ Open `index.html` in any modern browser.
 * Single branch compatible
 * Minimal codebase (well below 1 MB expected)
 * Includes complete code and documentation
+
+> **Documentation Updates**: View the exact working principles of individual files in our [INSTRUCTIONS.md](./INSTRUCTIONS.md) and read our open-source rights in the [LICENSE](./LICENSE).
 
 ---
 
