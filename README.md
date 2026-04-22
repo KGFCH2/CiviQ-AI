@@ -68,12 +68,15 @@ The project proudly leverages Google's ecosystem to enhance usability:
 
 ## 📂 Project Structure
 
-* `index.html` — 🏛️ The skeleton and settings modal.
-* `styles.css` — 🎨 Google-themed UI with Dark Mode support.
-* `app.js` — ⚙️ The brains: translation, AI logic, and state management.
-* `README.md` — 📖 You are here!
-* `INSTRUCTIONS.md` — 📚 Detailed Internal Architecture Guide.
-* `LICENSE` — ⚖️ Open-source MIT terms.
+* `public/` — 🌐 The core web root containing all client-side logic and assets.
+  * `index.html` — 🏛️ The main entry point and UI skeleton.
+  * `css/styles.css` — 🎨 The visual styling engine.
+  * `js/app.js` — ⚙️ Functional logic and AI integration.
+  * `assets/` — 🖼️ Static assets like the site favicon.
+* `README.md` — 📖 Project overview and challenge submission notes.
+* `INSTRUCTIONS.md` — 📚 Detailed technical architecture and file guide.
+* `LICENSE` — ⚖️ Legal rights and MIT terms.
+* `Dockerfile` & `nginx.conf.template` — 🛠️ Deployment configurations for Cloud Run.
 
 ---
 
