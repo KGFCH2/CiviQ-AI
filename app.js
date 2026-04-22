@@ -219,15 +219,17 @@ async function updateThemeButtonLabel() {
   if (!themeToggleBtn) return;
 
   const base = document.body.dataset.theme === "dark" ? "Light Mode" : "Dark Mode";
-  themeToggleBtn.dataset.en = base;
 
   const portalLang = getPortalLang();
   if (portalLang === "en") {
-    themeToggleBtn.textContent = base;
+    themeToggleBtn.setAttribute("aria-label", base);
+    themeToggleBtn.setAttribute("title", base);
     return;
   }
 
-  themeToggleBtn.textContent = await translateText(base, portalLang);
+  const translated = await translateText(base, portalLang);
+  themeToggleBtn.setAttribute("aria-label", translated);
+  themeToggleBtn.setAttribute("title", translated);
 }
 
 function setTheme(theme) {
