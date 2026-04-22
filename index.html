@@ -43,7 +43,7 @@
       <div id="settingsModal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 data-en="API Settings">API Settings</h2>
+            <h2 data-en="API Settings"><i class="fa-solid fa-shield-halved"></i> API Settings</h2>
             <button id="closeSettings" type="button" class="close-btn">×</button>
           </div>
           <div class="modal-body">
@@ -65,10 +65,10 @@
       </div>
 
       <section class="card profile-card">
-        <h2 data-en="User Profile">User Profile</h2>
+        <h2 data-en="User Profile"><i class="fa-solid fa-id-card"></i> User Profile</h2>
         <div class="grid">
           <label>
-            <span data-en="Age">Age</span>
+            <span data-en="Age"><i class="fa-solid fa-calendar-days"></i> Age</span>
             <input id="age" type="number" min="10" max="120" placeholder="e.g. 19" data-en-placeholder="e.g. 19" />
           </label>
           <label>
@@ -134,9 +134,9 @@
       </section>
 
       <section class="card chat-card">
-        <h2 data-en="Ask CiviQ AI">Ask CiviQ AI</h2>
+        <h2 data-en="Ask CiviQ AI"><i class="fa-solid fa-comment-dots"></i> Ask CiviQ AI</h2>
         <label>
-          <span data-en="User Input">User Input</span>
+          <span data-en="User Input"><i class="fa-solid fa-keyboard"></i> User Input</span>
           <textarea
             id="userInput"
             rows="4"
@@ -147,12 +147,12 @@
         </label>
 
         <div class="actions">
-          <button id="generateBtn" type="button" aria-label="Generate an AI Response" data-en="Generate Response">Generate Response</button>
-          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form" data-en="Reset">Reset</button>
+          <button id="generateBtn" type="button" aria-label="Generate an AI Response" data-en="Generate Response"><i class="fa-solid fa-bolt"></i> Generate Response</button>
+          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form" data-en="Reset"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
         </div>
 
         <article id="output" class="output" aria-live="polite" aria-atomic="true">
-          <h3 data-en="Response">Response</h3>
+          <h3 data-en="Response"><i class="fa-solid fa-reply-all"></i> Response</h3>
           <p data-en="Your result will appear here.">Your result will appear here.</p>
         </article>
         
