@@ -43,7 +43,7 @@
       <div id="settingsModal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 data-en="API Settings"><i class="fa-solid fa-shield-halved"></i> API Settings</h2>
+            <h2><i class="fa-solid fa-shield-halved"></i> <span data-en="API Settings">API Settings</span></h2>
             <button id="closeSettings" type="button" class="close-btn">×</button>
           </div>
           <div class="modal-body">
@@ -65,25 +65,25 @@
       </div>
 
       <section class="card profile-card">
-        <h2 data-en="User Profile"><i class="fa-solid fa-id-card"></i> User Profile</h2>
+        <h2><i class="fa-solid fa-id-card"></i> <span data-en="User Profile">User Profile</span></h2>
         <div class="grid">
           <label>
-            <span data-en="Age"><i class="fa-solid fa-calendar-days"></i> Age</span>
+            <span><i class="fa-solid fa-calendar-days"></i> <span data-en="Age">Age</span></span>
             <input id="age" type="number" min="10" max="120" placeholder="e.g. 19" data-en-placeholder="e.g. 19" />
           </label>
           <label>
-            <span data-en="Country">Country</span>
+            <span><i class="fa-solid fa-earth-asia"></i> <span data-en="Country">Country</span></span>
             <input id="country" type="text" value="India" placeholder="India" data-en-placeholder="India" />
           </label>
           <label>
-            <span data-en="First-time voter">First-time voter</span>
+            <span><i class="fa-solid fa-person-booth"></i> <span data-en="First-time voter">First-time voter</span></span>
             <select id="firstTime">
               <option value="Yes" data-en="Yes">Yes</option>
               <option value="No" data-en="No">No</option>
             </select>
           </label>
           <label>
-            <span data-en="Portal Language">Portal Language</span>
+            <span><i class="fa-solid fa-language"></i> <span data-en="Portal Language">Portal Language</span></span>
             <select id="portalLanguage">
               <option value="en">English</option>
               <option value="hi">Hindi (हिन्दी)</option>
@@ -101,7 +101,7 @@
             </select>
           </label>
           <label>
-            <span data-en="Answer Language">Answer Language</span>
+            <span><i class="fa-solid fa-ear-listen"></i> <span data-en="Answer Language">Answer Language</span></span>
             <select id="language">
               <option value="en">English</option>
               <option value="hi">Hindi (हिन्दी)</option>
@@ -119,7 +119,7 @@
             </select>
           </label>
           <label>
-            <span data-en="Task Mode">Task Mode</span>
+            <span><i class="fa-solid fa-list-check"></i> <span data-en="Task Mode">Task Mode</span></span>
             <select id="mode">
               <option value="A" data-en="A - General Question">A - General Question</option>
               <option value="B" data-en="B - Election Process">B - Election Process</option>
@@ -134,9 +134,9 @@
       </section>
 
       <section class="card chat-card">
-        <h2 data-en="Ask CiviQ AI"><i class="fa-solid fa-comment-dots"></i> Ask CiviQ AI</h2>
+        <h2><i class="fa-solid fa-comment-dots"></i> <span data-en="Ask CiviQ AI">Ask CiviQ AI</span></h2>
         <label>
-          <span data-en="User Input"><i class="fa-solid fa-keyboard"></i> User Input</span>
+          <span><i class="fa-solid fa-keyboard"></i> <span data-en="User Input">User Input</span></span>
           <textarea
             id="userInput"
             rows="4"
@@ -147,12 +147,12 @@
         </label>
 
         <div class="actions">
-          <button id="generateBtn" type="button" aria-label="Generate an AI Response" data-en="Generate Response"><i class="fa-solid fa-bolt"></i> Generate Response</button>
-          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form" data-en="Reset"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
+          <button id="generateBtn" type="button" aria-label="Generate an AI Response"><i class="fa-solid fa-bolt"></i> <span data-en="Generate Response">Generate Response</span></button>
+          <button id="resetBtn" type="button" class="ghost" aria-label="Reset the form"><i class="fa-solid fa-arrow-rotate-left"></i> <span data-en="Reset">Reset</span></button>
         </div>
 
         <article id="output" class="output" aria-live="polite" aria-atomic="true">
-          <h3 data-en="Response"><i class="fa-solid fa-reply-all"></i> Response</h3>
+          <h3><i class="fa-solid fa-reply-all"></i> <span data-en="Response">Response</span></h3>
           <p data-en="Your result will appear here.">Your result will appear here.</p>
         </article>
         
