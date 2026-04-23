@@ -1093,8 +1093,8 @@ function updateGoogleMapVisibility() {
         const lng = position.coords.longitude;
         const mapIframe = googleMapContainer.querySelector("iframe");
         if (mapIframe) {
-          // Precise street-level zoom (z=16) with coordinates
-          mapIframe.src = `https://maps.google.com/maps?q=election+booth+near+${lat},${lng}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+          // Precise street-level zoom (z=16) with optimized Indian election keywords
+          mapIframe.src = `https://maps.google.com/maps?q=Voter+Registration+Center+Election+Office+near+${lat},${lng}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
         }
       }, () => {
         const mapIframe = googleMapContainer.querySelector("iframe");
