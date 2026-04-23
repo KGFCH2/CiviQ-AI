@@ -1093,15 +1093,18 @@ function updateGoogleMapVisibility() {
         const lng = position.coords.longitude;
         const mapIframe = googleMapContainer.querySelector("iframe");
         if (mapIframe) {
-          // Dynamic search query based on real coordinates
-          mapIframe.src = `https://maps.google.com/maps?q=election+booth+near+${lat},${lng}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+          // Precise street-level zoom (z=16) with coordinates
+          mapIframe.src = `https://maps.google.com/maps?q=election+booth+near+${lat},${lng}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
         }
       }, () => {
-        // Fallback to general 'near me' if geolocation is denied
         const mapIframe = googleMapContainer.querySelector("iframe");
         if (mapIframe) {
           mapIframe.src = "https://maps.google.com/maps?q=election+booth+near+me&t=&z=13&ie=UTF8&iwloc=&output=embed";
         }
+      }, {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
       });
     }
   } else {
